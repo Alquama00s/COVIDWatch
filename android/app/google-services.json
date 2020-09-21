@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "335925520662",
+    "firebase_url": "https://covidwatch-5e2e4.firebaseio.com",
+    "project_id": "covidwatch-5e2e4",
+    "storage_bucket": "covidwatch-5e2e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335925520662:android:9ec5182d6915208dd28837",
+        "android_client_info": {
+          "package_name": "sillycone.covidwatch.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "335925520662-revbcobv3hdn61742j90mngnk7q7krgc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG06K-X4rz97-TGT84UPq3srQKl1gaxgI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "335925520662-revbcobv3hdn61742j90mngnk7q7krgc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

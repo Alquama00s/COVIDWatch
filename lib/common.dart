@@ -1,45 +1,32 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'contry.dart';
 import 'main.dart';
-import 'eco.dart';
-import 'geninfo.dart';
-import 'about.dart';
-import 'safety.dart';
-import 'insp.dart';
 import 'stat.dart';
+import 'package:google_fonts/google_fonts.dart';
 int ref=0;
 class App extends StatelessWidget {
-  _nav(int count){
-  switch (count){
-    case 0:
-      return Stats();
-    case 1:
-      return Info();
-    case 2:
-      return Safety();
-    case 3:
-      return Contry();
-    case 4:
-      return Eco();
-    case 5:
-      return Insp();
-    case 6:
-      return About();
-  }
-}
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
         onWillPop:(){return Future<bool>.value(false);},
         child: MaterialApp(
-          home: Scaffold(
+          theme: ThemeData(
+    textTheme: GoogleFonts.sanchezTextTheme(
+      
+      Theme.of(context).textTheme,
+    ),),
+          home:Container(
+                    decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/images/back.jpg'), fit: BoxFit.cover)),
+ 
+            child: Scaffold(
+              backgroundColor: Colors.transparent,
             drawer: Menu(),
             appBar: AppBar(
               title: Text("COVID Watch"),
             ),
-            body: _nav(ref),
-          ),
+            body: Stats(),
+          ),),
         ));
   }
 }
@@ -65,7 +52,7 @@ class Menu extends StatelessWidget {
                     ))),
           ),
           ListTile(
-            leading: Icon(Icons.input),
+            leading: Icon(Icons.insert_chart),
             title: Text('Statistics'),
             onTap: () => {
               ref=0,
@@ -73,7 +60,7 @@ class Menu extends StatelessWidget {
               main()
             },
           ),
-          ListTile(
+          /*ListTile(
             leading: Icon(Icons.verified_user),
             title: Text('COVID Info'),
             onTap: () => {ref=1,
@@ -119,7 +106,7 @@ class Menu extends StatelessWidget {
             leading: Icon(Icons.exit_to_app),
             title: Text('Exit App'),
             onTap: () => {exit(0)},
-          ),
+          ),*/
         ],
       ),
     );
